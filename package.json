@@ -1,0 +1,17 @@
+{
+  "name": "appleads",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3"
+  },
+  "description": "appLeads é API de cadastro de contatos (nome e email) de clientes em potencial. Esta permite a inserção destes dados em uma tabela SQL por meio do SGBD MySQL Workbench e com a finalidade de ações de marketing futuras."
+}
