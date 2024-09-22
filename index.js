@@ -1,15 +1,23 @@
 import express from 'express';
-import pool from './servico/conexao.js';
+
+import { cadastraLead } from './servico/cadastroServico.js';
 
 const app = express();
 
-app.listen(9000, async () => {
+app.use(express.json());
+
+app.post("/usuarios", async (req, res) => {
+    const nome = req.body.nome;
+    const email = req.body.email;
+
+    await cadastraLead(nome, email);
+
+    res.status(204).end();
+});
+
+app.listen(3001, async () => {
     let data = new Date();
     console.log('Servidor node iniciado em: ' + data);
 
-    const conexao = await pool.getConnection();
-    
-    console.log(conexao.threadId);
-
-    conexao.release();
+    cadastraLead('Marcos', 'marcos@ElementInternals.com');
 });
