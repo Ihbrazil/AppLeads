@@ -18,6 +18,4 @@ app.post("/usuarios", async (req, res) => {
 app.listen(3001, async () => {
     let data = new Date();
     console.log('Servidor node iniciado em: ' + data);
-
-    cadastraLead('Marcos', 'marcos@ElementInternals.com');
 });
