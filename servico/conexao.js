@@ -6,7 +6,6 @@ const pool = mysql.createPool({
     user    : 'root',
     password: 'admin',
     database: 'leads_bd',
-    multipleStatements: false,
 });
 
 export default pool;
