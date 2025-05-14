@@ -6,8 +6,8 @@ import { validaUsuario } from './validacao/valida.js';
 
 const app = express();
 
-app.use(express.json());
-app.use(cors());
+app.use(express.json()); // habilita o uso de JSON no body da requisição
+app.use(cors()); // habilita o uso de CORS para permitir requisições de outros domínios
 
 app.post("/usuarios", async (req, res) => {
     const nome = req.body.nome;
